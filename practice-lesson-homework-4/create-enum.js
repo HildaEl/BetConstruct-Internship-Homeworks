@@ -1,4 +1,3 @@
-
 (function createEnum(array) {
     'use strict';
     var Enum = {};
