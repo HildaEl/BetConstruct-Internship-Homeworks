@@ -1,4 +1,4 @@
-// 1rst exercise
+// Exercise 1
 function indexOf(array, element) {
         for(var i = 0; i < array.length; i++) {
                 if(array[i] === element) {
@@ -7,13 +7,11 @@ function indexOf(array, element) {
         }
         return -1;
 }
-
-// 2nd function
+// Exercise 2
 function getRandomInt(max) {
         return Math.round(Math.random() * max);
 }
-
-// 3rd funciton
+// Exercise 3
 function getRandomMatrix(n, m) {
         var matrix = new Array(n);
         for(var x = 0; x < n; x++) {
@@ -24,7 +22,7 @@ function getRandomMatrix(n, m) {
         }
         return matrix;
 }
-//4rd function
+//Exercise 4
 function matrixIndexOf(matrix, element) {
         for(var x = 0; x < matrix.length; x++) {
                 for(var y = 0; y < matrix[x].length; y++) {
@@ -35,8 +33,7 @@ function matrixIndexOf(matrix, element) {
         }
         return -1;
 }
-
-//exercise 5
+//Exercise 5
 function LastIndexOf(array, element) {
         for(var i = array.length-1; i >=0 ; i--) {
                 if(array[i] === element) {
@@ -45,8 +42,7 @@ function LastIndexOf(array, element) {
         }
         return -1;
 }
-
-// exercise 6
+//Exercise 6
 function matrixLastIndexOf(matrix, element) {
         for(var x = matrix.length-1; x >= 0; x--) {
                 for(var y = matrix[x].length-1; y >= 0; y--) {
@@ -57,9 +53,7 @@ function matrixLastIndexOf(matrix, element) {
         }
         return -1;
 }
-
-// exercise 7 
-
+//Exercise 7 
 function equals(a, b) {
         if((a === null || a === undefined) && (b === null || b === undefined)) {
                 return true;
