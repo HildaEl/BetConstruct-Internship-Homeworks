@@ -1,4 +1,5 @@
 function reduce(array, f, initialValue) {
+    'use strict';
     var i = 0;
     var result = initialValue || array[i++];
     for(var len = array.length; i < len; i++) {
