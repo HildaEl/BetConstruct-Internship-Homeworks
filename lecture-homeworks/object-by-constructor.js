@@ -1,14 +1,14 @@
 var validTransportationList = { 
-        CivilAviationAccident: ["Boeing 737","Airbus A319"],
-        MilitaryAviationAccident: ["MiG-29","AH-64 Apache"],
-        AviationAccident: ["Boeing 737","Airbus A319","MiG-29","AH-64 Apache"],
-        CarAccident: ["Audi A3","Ford F-150"],
-        Accident: ["Boeing 737","Airbus A319","MiG-29","AH-64 Apache","Audi A3","Ford F-150"],
+    CivilAviationAccident: ["Boeing 737","Airbus A319"],
+    MilitaryAviationAccident: ["MiG-29","AH-64 Apache"],
+    AviationAccident: ["Boeing 737","Airbus A319","MiG-29","AH-64 Apache"],
+    CarAccident: ["Audi A3","Ford F-150"],
+    Accident: ["Boeing 737","Airbus A319","MiG-29","AH-64 Apache","Audi A3","Ford F-150"],
 };
 
 function UserException(message) {
-   this.message = message;
-   this.name = 'UserException';
+    this.message = message;
+    this.name = 'UserException';
 }
 
 function Accident(name, date, num, trans, reason) {
@@ -28,14 +28,14 @@ Accident.prototype.addTransport = function(transport) {
             throw new UserException('Invalid transportation name');
         }
     }
-}
+};
 
 Accident.prototype.toString = function() {
     return "Crush date: " + this.date.toLocaleDateString() + "\n" +
         "Reason: " + this.reason + "\n" +
         "Number of damaged people: " + this.numOfDamagedPeople + "\n" +
         "Transportations involved: " + this.__transortationInvoloved.toString() + "\n";
-}
+};
 
 function AviationAccident(name, date, num, trans, reason, altitude) {
     Accident.call(this, name, date, num, trans, reason)
@@ -51,7 +51,7 @@ AviationAccident.prototype = Object.create(Accident.prototype, {
 AviationAccident.prototype.toString = function() {
     return Accident.prototype.toString.call(this) +
         "Altitude: " + this.altitude + "\n";
-}
+};
 
 function CivilAviationAccident(name, date, num, trans, reason, altitude, airlineName) {
     AviationAccident.call(this, name, date, num, trans, reason)
@@ -67,7 +67,7 @@ CivilAviationAccident.prototype = Object.create(AviationAccident.prototype, {
 CivilAviationAccident.prototype.toString = function() {
     return AviationAccident.prototype.toString.call(this) +
         "Name of airline: " + this.airlineName + "\n";
-}
+};
 
 function MilitaryAviationAccident(name, date, num, trans, reason, altitude, country, countriesInvolved) {
     AviationAccident.call(this, name, date, num, trans, reason)
@@ -85,7 +85,7 @@ MilitaryAviationAccident.prototype.toString = function() {
     return AviationAccident.prototype.toString.call(this) +
         "Country: " + this.country + "\n" +
         "Countries involved: " + this.countriesInvolved.toString() + "\n";
-}
+};
 
 function CarAccident(name, date, num, trans, reason, address, propertyDamageInAMD, InsuranceAgency) {
     Accident.call(this, name, date, num, trans, reason)
@@ -105,17 +105,17 @@ CarAccident.prototype.toString = function() {
         "Address: " + this.address + "\n" +
         "Damaged property in AMD: " + this.propertyDamageInAMD + "\n" +
         "Insurance agency involved: " + this.InsuranceAgency + "\n";
-}
+};
 
 var accident1 = new Accident();
-acciden1.date = new Date(2010,8,9);
+accident1.date = new Date(2010,8,9);
 var accident2 = new CivilAviationAccident();
-acciden2.date = new Date(2011,8,9);
+accident2.date = new Date(2011,8,9);
 var accident3 = new MilitaryAviationAccident();
-acciden3.date = new Date(2012,8,9);
+accident3.date = new Date(2012,8,9);
 var accident4 = new CarAccident();
-acciden4.date = new Date(2013,8,9);
-var arr = [acciden1,acciden2,acciden3,acciden4];
+accident4.date = new Date(2013,8,9);
+var arr = [accident1,accident2,accident3,accident4];
 
 arr.toString();
 arr.sort(function(a,b){return a.date.valueOf()-b.date.valueOf();})
