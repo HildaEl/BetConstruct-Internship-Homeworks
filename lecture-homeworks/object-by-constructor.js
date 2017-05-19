@@ -26,8 +26,8 @@ Accident.prototype.addTransport = function(transport) {
         }
         else {
             throw new UserException('Invalid transportation name');
-            }
         }
+    }
 }
 
 Accident.prototype.toString = function() {
@@ -107,13 +107,13 @@ CarAccident.prototype.toString = function() {
         "Insurance agency involved: " + this.InsuranceAgency + "\n";
 }
 
-var acciden1 = new Accident();
+var accident1 = new Accident();
 acciden1.date = new Date(2010,8,9);
-var acciden2 = new CivilAviationAccident();
+var accident2 = new CivilAviationAccident();
 acciden2.date = new Date(2011,8,9);
-var acciden3 = new MilitaryAviationAccident();
+var accident3 = new MilitaryAviationAccident();
 acciden3.date = new Date(2012,8,9);
-var acciden4 = new CarAccident();
+var accident4 = new CarAccident();
 acciden4.date = new Date(2013,8,9);
 var arr = [acciden1,acciden2,acciden3,acciden4];
 
