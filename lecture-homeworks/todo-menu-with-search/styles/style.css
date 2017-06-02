@@ -1,0 +1,119 @@
+
+ul li:hover {
+    background: #ddd;
+}
+.upper {
+    background-color: #5d86f4;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+input[type=text]{
+    border: none;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+    border: 2px #5e5858 solid;
+}
+
+#add {
+    padding: 10px;
+    width: 22%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    /* margin: 10px; */
+    position: relative;
+    box-sizing: border-box;
+    margin-top: auto;
+    height: 43px;
+    margin-bottom: 20px;
+}
+
+.button:hover {
+    background-color: #cccccc;
+}
+body{
+    margin:0;
+    background-color: #bfd3e0;
+}
+
+input[type=radio]{
+    width   : 20px;
+    margin-left: -20;
+    display: inline;
+    margin: auto;
+}
+
+.lower{
+    background-color: #bfd3e0;
+}
+
+.lower ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #bfd3e0;
+;
+}
+
+.lower li {
+    background: #ebebeb;
+    border-left: 2px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 5px 0px 5px;
+    width: 100%;
+    margin: 5px 0px 0px 40px;
+}
+ a {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 5px;
+    width: 100%;
+     text-decoration: none;
+     margin-left: 10px;
+ }
+ a:hover{
+     background-color: #cccccc;
+ }
+ input[type=checkbox]{
+     margin-right: 5px;
+ }
+ div div#count{
+     width:250px;
+     hegith:100px;
+     padding:10px;
+     border-radius: 15%;
+     border:2px solid darkblue;
+     display: inline-block;
+ }
+
+
+.options {
+    margin-left: -300px;
+    /* padding-left: -0px; */
+    width: 73%
+}
+
+#searchI {
+    margin-left: 300px;
+    width: 25%;
+    height: 35px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin-right: -90px;
+}
+#search {
+    height: 35px;
+}
